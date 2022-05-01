@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="max-width">
+    <div class="logo" (click)="getHeadlines()">BT News</div>
+    <div class="nav-items">
+      <div #searchBox class="search-box" (animationend)="onAnimationEnd()">
+        <input type="text" placeholder="{{ placeholderSearch }}" [(ngModel)]="appService.searchValue"
+          (keydown.enter)="searchKeyword()">
+        <i class="fa-solid fa-magnifying-glass" (click)="searchKeyword()"></i>
+      </div>
+      <span class="headlines-btn" title="{{ placeholderHeadlines }}" (click)="getHeadlines()">
+        <i class="fa-solid fa-newspaper"></i>
+      </span>
+      <span class="theme-switch" [ngClass]="{'night': !isDarkMode}" title="{{ placeholderTheme }}"
+        (click)="switchTheme()">
+        <i class="fa-solid fa-moon"></i>
+      </span>
+    </div>
+  </div>
+</nav>

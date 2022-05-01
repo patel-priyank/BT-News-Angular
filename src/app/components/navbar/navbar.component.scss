@@ -1,0 +1,96 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  background-color: var(--primary);
+  transition: background-color 0.3s ease;
+
+  .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .logo {
+    cursor: pointer;
+    color: var(--on-primary);
+    font-size: 2.25rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.search-box {
+  position: relative;
+  width: 15rem;
+  margin-right: 1.5rem;
+
+  input {
+    font-family: "Lato", sans-serif;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    padding-right: 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    width: 100%;
+  }
+
+  &.invalid {
+    animation: shake 0.3s;
+
+    input {
+      background-color: var(--error);
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    cursor: pointer;
+  }
+}
+
+.headlines-btn,
+.theme-switch {
+  width: 1.5rem;
+  text-align: center;
+  color: var(--on-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: color 0.3s ease;
+}
+
+.headlines-btn {
+  margin-right: 1.5rem;
+}
+
+.theme-switch.night i::before {
+  content: "\f185"; /* sun icon */
+}
+
+/* small */
+@media (max-width: 768px) {
+  .navbar {
+    .max-width {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-items {
+      margin-top: 1rem;
+    }
+  }
+}

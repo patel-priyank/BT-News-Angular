@@ -1,0 +1,48 @@
+section {
+  padding: 7.5rem 0;
+
+  .title {
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--on-primary);
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+.select-view {
+  display: flex;
+
+  span {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &.selected {
+      background-color: var(--primary-alt);
+      color: var(--on-primary-alt);
+    }
+  }
+}
+
+/* small */
+@media (max-width: 768px) {
+  section {
+    padding-top: 10.5rem;
+  }
+
+  .select-view {
+    display: none;
+  }
+}

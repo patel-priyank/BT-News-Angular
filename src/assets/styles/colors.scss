@@ -1,0 +1,26 @@
+:root {
+  --primary: #d4e4fc;
+  --on-primary: #000;
+  --background: #f5f5f5;
+  --background-alt: #fff;
+  --background-filter: #ebebeb;
+  --article-content: #333;
+  --box-shadow: #999;
+  --error: #ff8080;
+
+  --white: #fff;
+  --black: #000;
+  --primary-alt: #6ea7f7;
+  --on-primary-alt: #000;
+}
+
+[data-theme="dark"] {
+  --primary: #1d2b3e;
+  --on-primary: #fff;
+  --background: #141414;
+  --background-alt: #000;
+  --background-filter: hsl(0, 0%, 16%);
+  --article-content: #999;
+  --box-shadow: #333;
+  --error: #bf4040;
+}

@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./assets/styles/colors";
+@use "./assets/styles/keyframes";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+li {
+  list-style: none;
+}
+
+.max-width {
+  max-width: 1320px;
+  padding: 0 5rem;
+  margin: auto;
+}
+
+/* #region media queries */
+
+/* large */
+@media (max-width: 1200px) {
+  .max-width {
+    max-width: 1140px;
+    padding: 0 4rem;
+  }
+}
+
+/* medium */
+@media (max-width: 992px) {
+  .max-width {
+    max-width: 960px;
+    padding: 0 3rem;
+  }
+}
+
+/* small */
+@media (max-width: 768px) {
+  .max-width {
+    max-width: 720px;
+    padding: 0 2rem;
+  }
+}
+
+/* extra small */
+@media (max-width: 576px) {
+  .max-width {
+    max-width: 540px;
+  }
+}
+
+/* #endregion */
